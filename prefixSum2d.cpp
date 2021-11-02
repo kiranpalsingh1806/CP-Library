@@ -10,7 +10,7 @@ void solve()
 	int N;
 	int Q;
 	cin >> N >> Q;
-	// read in the initial trees
+	// read the 2D array
 	for (int i = 1; i <= N; i++) {
 		for (int j = 1; j <= N; j++) {
 			cin >> array2D[i][j];
