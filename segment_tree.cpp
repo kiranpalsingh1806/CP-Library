@@ -1,5 +1,4 @@
 
-
 int n; // Size of array
 int a[100005];
 int t[100005*4];
@@ -39,17 +38,65 @@ void update(int v, int tl, int tr, int pos, int new_val) {
     }
 }
 
-// Implementation
-cin>>n;
-rep(i,1,n)
+void solve()
 {
-   cin>>a[i];
+        // Implementation
+    cin>>n;
+    for(int i = 0; i < n; i++) {
+        cin >> a[i];
+    }   
+
+    //Building segment tree
+    build(a, 1, 0, n-1);
+    cout << sum(1, 0, n-1, 0, 0) << nline;
+    cout << sum(1, 0, n-1, 0, 1) << nline;
+    cout << sum(1, 0, n-1, 0, 2) << nline;
+    cout << sum(1, 0, n-1, 0, 3) << nline;
+    cout << sum(1, 0, n-1, 0, 4) << nline;
+    cout << sum(1, 0, n-1, 0, 7) << nline;
+    cout << lineSeparator() << nline;
+
+    for(int i = 0; i<=2*n; i++) {
+        cout << t[i] << " ";
+    }
+    cout << lineSeparator() << "\n";
+
+    //Updating segment tree
+    update(1, 0, n-1, 2, 10);
+    outl("Updated 3rd position with 10");
+    cout << lineSeparator() << "\n";
+
+    for(int i = 0; i<=2*n; i++) {
+        cout << t[i] << " ";
+    }
+    cout << lineSeparator() << "\n";
+
+    cout << sum(1, 0, n-1, 0, 0) << nline;
+    cout << sum(1, 0, n-1, 0, 1) << nline;
+    cout << sum(1, 0, n-1, 0, 2) << nline;
+    cout << sum(1, 0, n-1, 0, 3) << nline;
+    cout << sum(1, 0, n-1, 0, 4) << nline;
+    cout << sum(1, 0, n-1, 0, 7) << nline;
+
+    cout << lineSeparator() << "\n";
+    for(int i = 0; i<=2*n; i++) {
+        cout << t[i] << " ";
+    }
+    cout << lineSeparator() << "\n";
+
+    update(1, 0, n-1, 4, 20);
+    outl("Updated 5th position with 20");
+    cout << lineSeparator() << "\n";
+
+    for(int i = 0; i<=2*n; i++) {
+        cout << t[i] << " ";
+    }
+    cout << lineSeparator() << "\n";
+
+    cout << sum(1, 0, n-1, 0, 0) << nline;
+    cout << sum(1, 0, n-1, 0, 1) << nline;
+    cout << sum(1, 0, n-1, 0, 2) << nline;
+    cout << sum(1, 0, n-1, 0, 3) << nline;
+    cout << sum(1, 0, n-1, 0, 4) << nline;
+    cout << sum(1, 0, n-1, 0, 7) << nline;
 }
-
-//Building segment tree
-build(a,1,0,n-1);
-cout<<sum(1,0,n-1,1,9)<<nline;
-
-//Updating segment tree
-update(1,0,n-1,2,21);
-cout<<sum(1,0,n-1,1,9)<<nline;
