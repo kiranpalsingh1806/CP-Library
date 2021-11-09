@@ -3,6 +3,8 @@ const int N = 3e5 + 9;
 int n, m;
 vector<pair<int, int>> g[N];
 
+
+// First parameter is source vertex and second is adjacency list
 vector<long long> dijkstra(int s, vector<pair<int, int>> g[])
 {
     priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> q;
@@ -27,7 +29,7 @@ vector<long long> dijkstra(int s, vector<pair<int, int>> g[])
 int u[N], v[N], w[N];
 void solve()
 {
-	int s, t; cin >> n >> m;
+	cin >> n >> m;
     for(int i = 1; i <= m; i++){
         cin >> u[i] >> v[i] >> w[i];
         g[u[i]].push_back({v[i], w[i]});
