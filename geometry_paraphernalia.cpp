@@ -23,6 +23,10 @@ namespace GeometryParaphernalia{
 	// Usage for finding 3D Euclidean Distance:
 	// vector<coordinate3D> points3D(N);
 	// for(auto &point : points3D) cin >> point.x >> point.y >> point.z;
+
+	int ChebyhevDistance(const coordinate &a, const coordinate &b) {
+		return max(b.y - a.y, b.x - a.x);
+	}
 }
 using namespace GeometryParaphernalia;
 
@@ -42,6 +46,20 @@ void solve()
     	cout << manhattan << " " << euclid << "\n";
     }
 
+    int num;
+    cin >> num;
+    vector<coordinate> chebyVector(4);
+    for(auto &point: chebyVector) {
+    	cin >> point.x >> point.y;
+    }
+
+    int query, xx, yy;
+    cin >> query;
+
+    for(int i = 0; i < query; i++) {
+    	cin >> xx >> yy;
+    	cout << ChebyhevDistance(chebyVector[xx], chebyVector[yy]) << "\n";
+    }
 }
 
 // Input
@@ -53,8 +71,20 @@ void solve()
 // 0 3
 // 0 1
 // 1 3
+// 4
+// 2 2
+// 2 4
+// 4 2
+// 4 4
+// 3
+// 0 1
+// 0 2
+// 0 3
 
 // Output
 // 6 4.24264
 // 3 3
 // 3 3
+// 2
+// 2
+// 2
