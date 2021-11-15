@@ -22,9 +22,7 @@ void solve()
 	vector<int> v(vec1.size() + vec2.size());
 	debug(v);
 
-	auto it = set_intersection(vec1.begin(), vec1.end(),
-						  	   vec2.begin(), vec2.end(),
-						       v.begin());
+	auto it = set_intersection(vec1.begin(), vec1.end(),vec2.begin(), vec2.end(),v.begin());
 
 	debug(v);
 	cout << "Common Elements : " << it - v.begin() << "\n";
