@@ -35,6 +35,14 @@ inline void remove(int x) {
 	freq[x]--;
 	cur += 1LL * freq[x] * freq[x] * x;
 }
+
+void freqArray() {
+	cerr << "The frequency array : ";
+	for(int i = 0; i < 5; i++) {
+		cerr << freq[i] << " ";
+	} 
+	cerr << "\n";
+}
  
 void mo() {
 	for(int i = 1; i <= q; i++) {
@@ -51,14 +59,19 @@ void mo() {
 	int l = 1, r = 0;
 	cur = 0;
 	for(int i=1; i<=q; i++) {
+		freqArray();
 		while(l < qr[i].l) remove(a[l++]);
 		cerr << "The val of cur in 1st while in Query " << i << " : " << cur << "\n";
+		freqArray();
 		while(l > qr[i].l) add(a[--l]);
 		cerr << "The val of cur in 2nd while in Query " << i << " : " << cur << "\n";
+		freqArray();
 		while(r < qr[i].r) add(a[++r]);
 		cerr << "The val of cur in 3rd while in Query " << i << " : " << cur << "\n";
+		freqArray();
 		while(r > qr[i].r) remove(a[r--]);
 		cerr << "The val of cur in 4th while in Query " << i << " : " << cur << "\n";
+		freqArray();
 		ans[qr[i].idx] = cur;
 		cerr << lineSeparator() << "\n";
 	}
@@ -85,9 +98,6 @@ void solve()
 		cout << ans[i] << "\n";
 	}
 }
-
-// Problem
-// https://codeforces.com/contest/86/problem/D
 
 // Input
 // 20 5
@@ -119,30 +129,55 @@ void solve()
 // Query 4 : 7 7 4
 // Query 5 : 1 2 2
 // ----------------------------------
+// The frequency array : 0 0 0 0 0 
 // The val of cur in 1st while in Query 1 : 1
+// The frequency array : 0 -1 0 0 0 
 // The val of cur in 2nd while in Query 1 : 1
+// The frequency array : 0 -1 0 0 0 
 // The val of cur in 3rd while in Query 1 : 281
+// The frequency array : 0 9 10 0 0 
 // The val of cur in 4th while in Query 1 : 281
+// The frequency array : 0 9 10 0 0 
 // ----------------------------------
+// The frequency array : 0 9 10 0 0 
 // The val of cur in 1st while in Query 2 : 48
+// The frequency array : 0 4 4 0 0 
 // The val of cur in 2nd while in Query 2 : 48
+// The frequency array : 0 4 4 0 0 
 // The val of cur in 3rd while in Query 2 : 48
+// The frequency array : 0 4 4 0 0 
 // The val of cur in 4th while in Query 2 : 27
+// The frequency array : 0 3 3 0 0 
 // ----------------------------------
+// The frequency array : 0 3 3 0 0 
 // The val of cur in 1st while in Query 3 : 27
+// The frequency array : 0 3 3 0 0 
 // The val of cur in 2nd while in Query 3 : 177
+// The frequency array : 0 7 8 0 0 
 // The val of cur in 3rd while in Query 3 : 177
+// The frequency array : 0 7 8 0 0 
 // The val of cur in 4th while in Query 3 : 108
+// The frequency array : 0 6 6 0 0 
 // ----------------------------------
+// The frequency array : 0 6 6 0 0 
 // The val of cur in 1st while in Query 4 : 57
+// The frequency array : 0 5 4 0 0 
 // The val of cur in 2nd while in Query 4 : 57
+// The frequency array : 0 5 4 0 0 
 // The val of cur in 3rd while in Query 4 : 57
+// The frequency array : 0 5 4 0 0 
 // The val of cur in 4th while in Query 4 : 1
+// The frequency array : 0 1 0 0 0 
 // ----------------------------------
+// The frequency array : 0 1 0 0 0 
 // The val of cur in 1st while in Query 5 : 1
+// The frequency array : 0 1 0 0 0 
 // The val of cur in 2nd while in Query 5 : 34
+// The frequency array : 0 4 3 0 0 
 // The val of cur in 3rd while in Query 5 : 34
+// The frequency array : 0 4 3 0 0 
 // The val of cur in 4th while in Query 5 : 3
+// The frequency array : 0 1 1 0 0 
 // ----------------------------------
 // Answer Array
 // 108
