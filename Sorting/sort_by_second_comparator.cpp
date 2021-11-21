@@ -8,3 +8,4 @@ bool cmp(const pair<string, long> &p1, const pair<string, long> &p2)
 
 // Usage - in sorting as comparator function
 sort(vect.begin(), vect.end(), cmp);
+

@@ -30,3 +30,6 @@ void solve()
 // 10101
 // 010101
 // 00111111
+
+// Problems
+// https://www.codechef.com/START17B/problems/BININV
