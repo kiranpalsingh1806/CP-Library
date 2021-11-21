@@ -1,0 +1,11 @@
+Convex Hull Trick
+https://atcoder.jp/contests/abc228/tasks/abc228_h
+
+
+Euler Phi
+
+
+Struct Point
+
+
+Geometry Paraphernalia
