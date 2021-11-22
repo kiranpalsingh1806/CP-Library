@@ -1,0 +1,17 @@
+Sieve:
+
+Sieve in range:
+
+Sum with base K:
+
+Max Digit in Number:
+
+GCD Properties:
+
+Convert Number in decimal:
+
+Chicken McNugget Theorem:
+https://codeforces.com/contest/1526/problem/B
+
+Arithmetic Mean - Geometric Means Inequality:
+https://www.codechef.com/COOK135A/problems/PRDTPAIN

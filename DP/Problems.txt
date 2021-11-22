@@ -1,3 +1,11 @@
 
 Dynamic Programming :
+
+Planar Reflections
 https://codeforces.com/contest/1498/problem/C
+
+Longest Increasing Subsequence (LIS):
+Type: Strict / Non -scrict
+
+Non-Decreasing Subsequence of size K
+https://www.codechef.com/COOK135A/problems/DECSUBK

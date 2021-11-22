@@ -8,7 +8,7 @@ int gcd(int a, int b) {
 
 // Finding maximum gcd of two numbers a and b in range [L, R]
 // in O(n) time instead of O(n ^ 2) time.
-	cin >> L >> R;
+	// cin >> L >> R;
 	int maxGCD = -1e9;
 	int operations = 0;
 

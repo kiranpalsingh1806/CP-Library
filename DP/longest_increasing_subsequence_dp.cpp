@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long 
+#define inf 1e18
 
 int LIS(vector<ll> &a) {
     int n = a.size();
@@ -15,6 +19,10 @@ void solve()
     vector<ll> a(N);
     for (int i = 0; i < N; ++i) cin >> a[i];
     cout << LIS(a) << endl;
+}
+
+int main() {
+    solve();
 }
 
 // Input
